@@ -20,7 +20,7 @@ uint64_t fact(uint16_t n) {
 }
 
 double calcItem(double x, uint16_t n) {
-  if (n == 0 || x==0 ) return 0;
+  if (n == 0 || x==0) return 0;
   return pown(x,n)/fact(n);
 }
 
@@ -36,7 +36,7 @@ double sinn(double x, uint16_t count) {
   double result = x;
   int step = 3;
   int symbol = -1;
-  for (int i = 1; i <= count; i++) {
+  for (int i = 2; i <= count; i++) {
     result += symbol * (pown(x, step) / fact(step));
     step += 2;
     symbol = -symbol;
@@ -48,7 +48,7 @@ double cosn(double x, uint16_t count) {
   double result = 1;
   int step = 2;
   int symbol = -1;
-  for (int i = 1; i <= count; i++) {
+  for (int i = 2; i <= count; i++) {
     result += symbol*(pown(x, step) / fact(step));
     step += 2;
     symbol = -symbol;
